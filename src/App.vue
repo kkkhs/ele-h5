@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TabsView from './views/tabs/TabsView.vue'
+</script>
 
-<template></template>
+<template>
+  <tabs-view />
+</template>
 
 <style scoped></style>
