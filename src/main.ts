@@ -3,7 +3,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
-import { Tabbar, TabbarItem } from 'vant'
+import { Tabbar, TabbarItem, Search } from 'vant'
 
 import App from './App.vue'
 import router from './router'
@@ -18,6 +18,7 @@ app.use(router)
 
 app.use(Tabbar)
 app.use(TabbarItem)
+app.use(Search)
 
 // 实现不同设备的适配
 const width = document.documentElement.clientWidth
