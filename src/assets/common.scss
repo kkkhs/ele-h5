@@ -1,0 +1,47 @@
+#app {
+  --op-primary-color: rgb(31, 175, 243);
+  --op-gray-bg-color: rgb(244, 244, 244);
+}
+
+.op {
+  &-thin-border {
+    color: rgb(247, 68, 68);
+    position: relative;
+    border: none;
+    // 如果直接使用 border 的话，因为这里有 transform: scale(0.2) 把边框线变细
+    // 但这样也会把整个元素也缩小
+    // 所以这里使用伪元素 :before 来画边框线，这样缩小边框线就不会影响到整个元素
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid rgb(247, 68, 68);
+      border-radius: 20px;
+      box-sizing: border-box;
+      width: 500%;
+      height: 500%;
+      transform: scale(0.2);
+      transform-origin: left top;
+    }
+  }
+
+  &-ellipsis {
+    white-space: nowrap; /* 规定文本是否折行 */
+    overflow: hidden; /* 规定超出内容宽度的元素隐藏 */
+    text-overflow: ellipsis; /* 规定超出的内容文本省略号显示，通常跟上面的属性连用，因为没有上面的属性不会触发超出规定的内容 */
+  }
+
+  &-lazyload {
+    background-color: rgb(173, 171, 171);
+  }
+
+  &-fullscreen {
+    background: var(--op-gray-bg-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,21 @@
+.op-list {
+  &__loading,
+  &__finished-text {
+    color: var(--van-list-text-color);
+    font-size: var(--van-list-text-font-size);
+    line-height: var(--van-list-text-line-height);
+    text-align: center;
+  }
+
+  &__placeholder {
+    height: 0;
+    pointer-events: none;
+  }
+
+  &__loading-icon {
+    .van-loading__spinner {
+      width: var(--van-list-loading-icon-size);
+      height: var(--van-list-loading-icon-size);
+    }
+  }
+}

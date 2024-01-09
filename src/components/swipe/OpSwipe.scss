@@ -1,0 +1,32 @@
+.op-swipe {
+  overflow: hidden;
+  position: relative;
+
+  &__track {
+    display: flex;
+    position: relative;
+  }
+
+  &__indicators {
+    position: absolute;
+    bottom: var(--van-swipe-indicator-margin);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+
+  &__indicator {
+    width: var(--van-swipe-indicator-size);
+    height: var(--van-swipe-indicator-size);
+    margin-right: var(--van-swipe-indicator-size);
+    border-radius: 100%;
+    opacity: var(--van-swipe-indicator-inactive-opacity);
+    background-color: var(--van-swipe-indicator-inactive-background);
+    transition: opacity var(--van-animation-duration-fast), background-color var(--van-animation-duration-fast);
+
+    &--active {
+      opacity: var(--van-swipe-indicator-active-opacity);
+      background-color: var(--van-swipe-indicator-active-background);
+    }
+  }
+}

@@ -68,15 +68,16 @@ const onClear = () => {
 
 <style lang="scss">
 :root {
-  --op-search-padding: 0.1rem var(--van-padding-sm);
+  --op-search-padding: 10px var(--van-padding-sm);
   --op-search-background-color: var(--van-background-color-light);
   --op-search-content-background: var(--van-gray-1);
   --op-search-left-icon-color: var(--van-gray-6);
   --op-search-action-padding: 0 var(--van-padding-xs);
   --op-search-action-text-color: var(--van-text-color);
   --op-search-action-font-size: var(--van-font-size-md);
-  --op-search-input-height: 0.34rem;
+  --op-search-input-height: 34px;
 }
+
 .op-search {
   display: flex;
   align-items: center;
@@ -173,7 +174,6 @@ const onClear = () => {
     cursor: pointer;
   }
 }
-
 input {
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,
