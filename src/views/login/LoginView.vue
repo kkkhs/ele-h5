@@ -34,7 +34,7 @@ const onSubmit = async (data: ILoginInfo) => {
         />
       </VanCellGroup>
       <div style="margin: 16px">
-        <VanButton round block type="primary" native-type="submit">提交</VanButton>
+        <VanButton round block type="primary" native-type="submit">登陆</VanButton>
       </div>
     </VanForm>
   </div>
@@ -42,7 +42,7 @@ const onSubmit = async (data: ILoginInfo) => {
 
 <style lang="scss" scoped>
 .login-page {
-  .login-form {
+  .login-page__form {
     margin-top: 100px;
   }
 }

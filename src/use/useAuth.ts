@@ -12,6 +12,7 @@ export function useAuth() {
   }
   const logout = () => {
     store.removeInfo()
+    location.reload()
   }
   return {
     user,

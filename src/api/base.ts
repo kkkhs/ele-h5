@@ -1,8 +1,18 @@
+import { useLocalStorage } from '@/use/useLocalStorage'
 import axios from 'axios'
 import { showDialog } from 'vant'
 
 const instance = axios.create({
   baseURL: '/api'
+})
+
+// 请求头加token
+instance.interceptors.request.use((config) => {
+  const { value: token } = useLocalStorage('token', '')
+  if (config.headers && token.value) {
+    config.headers['x-token'] = token.value
+  }
+  return config
 })
 
 //添加拦截器
@@ -21,6 +31,7 @@ instance.interceptors.response.use(
     return data
   },
   (err) => {
+    // 没有权限的情况
     if (err.response && err.response.status === 401) {
       showDialog({
         message: '请登录'
