@@ -34,6 +34,6 @@ export function useLocalStorage<T>(key: string, initalValue: T) {
   return {
     value: storedValue,
     setValue,
-    removeItem,
+    removeItem
   }
 }
