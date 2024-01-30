@@ -17,7 +17,10 @@ import {
   Form,
   CellGroup,
   Field,
-  Button
+  Button,
+  ActionSheet,
+  Sidebar,
+  SidebarItem
 } from 'vant'
 
 import App from './App.vue'
@@ -46,6 +49,9 @@ app.use(Form)
 app.use(CellGroup)
 app.use(Field)
 app.use(Button)
+app.use(ActionSheet)
+app.use(Sidebar)
+app.use(SidebarItem)
 app.use(lazyPlugin)
 
 // 实现不同设备的适配

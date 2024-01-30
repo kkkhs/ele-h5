@@ -28,6 +28,7 @@ export interface IActivity {
   infos?: string[]
 }
 
+//继承
 export interface IShopDetail extends IShop {
   announcement: string
   discounts: IDiscount[]
