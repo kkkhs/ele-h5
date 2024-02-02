@@ -23,16 +23,6 @@ export default defineConfig({
   //vite配置proxy
   server: {
     port: 3000,
-    proxy: {
-      '/api': 'http://121.40.200.148:8000/',
-      '/imgs': 'http://121.40.200.148:8000/',
-    }
+    
   }
 })
-
-//打包配置文件
-module.exports = {
-  assetsDir: 'static',
-  parallel: false,
-  publicPath: './',
-};
