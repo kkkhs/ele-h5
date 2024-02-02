@@ -3,7 +3,7 @@ import axios from 'axios'
 import { showDialog } from 'vant'
 
 const instance = axios.create({
-  baseURL: '121.40.200.148:8000/api'
+  baseURL: 'http://121.40.200.148:8000/api'
 })
 
 // 请求头加token
