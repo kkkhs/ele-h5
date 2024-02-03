@@ -20,7 +20,10 @@ import {
   Button,
   ActionSheet,
   Sidebar,
-  SidebarItem
+  SidebarItem,
+  Popup,
+  Checkbox,
+  CheckboxGroup,
 } from 'vant'
 
 import App from './App.vue'
@@ -52,6 +55,9 @@ app.use(Button)
 app.use(ActionSheet)
 app.use(Sidebar)
 app.use(SidebarItem)
+app.use(Popup)
+app.use(Checkbox)
+app.use(CheckboxGroup)
 app.use(lazyPlugin)
 
 // 实现不同设备的适配

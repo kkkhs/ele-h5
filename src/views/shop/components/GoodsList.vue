@@ -50,7 +50,7 @@ const data: IMenu[] = [
             checked:false
           },{
             id: 3,
-            name: '【果切】',
+            name: '【果切】11111',
             imgUrl: '/imgs/index_page/shop-list/post1.png',
             sellCount: 587,
             rating: 4.2,
@@ -65,7 +65,7 @@ const data: IMenu[] = [
             checked:false
           },{
             id: 4,
-            name: '【果切】',
+            name: '【果切】22222',
             imgUrl: '/imgs/index_page/shop-list/post1.png',
             sellCount: 587,
             rating: 4.2,

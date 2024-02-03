@@ -6,7 +6,8 @@ fetchTest()
 </script>
 
 <template>
-  <tabs-view></tabs-view>
+  <RouterView />
+<!-- <TabsView></TabsView> -->
 </template>
 
 <style>
