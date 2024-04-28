@@ -7,6 +7,9 @@ import { useCartStore } from '@/stores/cart'
 import { fetchGoodsListData } from '@/api/goods'
 import { useRoute } from 'vue-router';
 import GoodsItem from './GoodsItem.vue';
+import BScroll from 'better-scroll'
+import useCurrentInstance from '@/use/useCurrentInstance'
+const { proxy } = useCurrentInstance()
 
 const route = useRoute()
 const { id } = route.params
@@ -500,17 +503,26 @@ watch(data, (nv) => {
   setCartItems(cartGoods)
 })
 const categoryActive = ref(0)
+const  listHeight = []    // 存放右边模块内容的高度
+const rightTitHeight = 0  // 右边模块标题的高度
+const  scrollY = 0 		// 右边滚动时的scrollTop
+
+const changeMenu = (index: number) => {
+  // proxy.rightList.scrollToElement(proxy.$refs.good[index], 1000, 0, 0);
+  
+}
 </script>
 
 <template>
   <OpLoadingView :loading="pending" type="skeleton">
-    <div class="shop-goods-list">
-      <VanSidebar v-model="categoryActive">
-        <VanSidebarItem v-for="v in data" :key="v.label" :title="v.label"></VanSidebarItem>
+    <div class="shop-goods-list "> 
+      <VanSidebar v-model="categoryActive" @change="changeMenu">
+        <VanSidebarItem  
+        v-for="v in data" :key="v.label" :title="v.label"></VanSidebarItem>
       </VanSidebar>
-      <div class="list">
-        <template v-for="v in data" :key="v.label">
-          <div class="category-name">{{ v.label }}</div>
+      <div class="list" ref="scroll">
+        <template class="main-content" v-for="v in data" :key="v.label" >
+          <div class="category-name" ref="rightTit">{{ v.label }}</div>
           <GoodsItem v-for="cv in v.goods" :key="cv.id" :data="cv"/>
         </template>
       </div>
@@ -531,6 +543,8 @@ const categoryActive = ref(0)
       padding: 10px 0 ;
       line-height: 1.2;
     }
+    overflow: scroll;
+    max-height: 500px;
   }
 }
 </style>

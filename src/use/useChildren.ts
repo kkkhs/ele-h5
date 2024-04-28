@@ -10,14 +10,16 @@ export function useChildren<T>(key: InjectionKey<ParentProvide<T>>) {
 
   const linkChildren = (value?: T) => {
     const link = (child: Child) => {
+      //@ts-ignore
       children.push(child)
     }
 
     const unlink = (child: Child) => {
+      //@ts-ignore
       const index = children.indexOf(child)
       children.splice(index, 1)
     }
-
+    //@ts-ignore
     provide(key, {
       link,
       unlink,

@@ -23,6 +23,15 @@ export default defineConfig({
   //vite配置proxy
   server: {
     port: 3000,
-    
+    proxy: {
+      '/api': {
+        target: 'http://117.72.72.34:8000/',
+        changeOrigin: true,
+      },
+      '/imgs':  {
+        target: 'http://117.72.72.34:8000/',
+        changeOrigin: true,
+      }
+    }
   }
 })

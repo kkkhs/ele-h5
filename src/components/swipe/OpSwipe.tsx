@@ -114,7 +114,7 @@ export default defineComponent({
         // 反向滚动，从右向左
         if (children[count.value - 1] && targetOffset !== 0) {
           const onLeftBound = targetOffset > 0;
-          (children[count.value - 1] as NotNullChild).setOffset(onLeftBound ? -trackSize.value : 0)
+          (children[count.value - 1] as any).setOffset(onLeftBound ? -trackSize.value : 0)
         }
       }
 
