@@ -44,3 +44,12 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### 服务器部署方法(基于宝塔面板)
+首先部署仓库里的.[ele-h5-server].(https://github.com/kkkhs/ele-h5-server)可获取mock数据
+默认端口3000
+需要额外2个配置反向代理到已部署的服务器上
+![image](https://github.com/kkkhs/ele-h5/assets/141250392/43d0ca5a-268f-4e45-b9a4-e414f209ae40)
+![image](https://github.com/kkkhs/ele-h5/assets/141250392/85427330-8520-417b-9dd0-dbea6b481438)
+
+enjoy it!!!
